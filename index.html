@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+    body{
+      background: #0D192C;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      font-family: "Outfit", sans-serif;
+    }
+    .card{
+      background: #15263F;
+      width: 327px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 16px;
+      padding-top: 24px;
+    }
+
+    .image-equilibrium{
+      width: 278px;
+      height: 278px;
+      transition: all .5s ease-in;
+    }
+
+    .image-equilibrium:hover{
+      color:#00FFF8;
+    }
+
+    .overlay {
+  position: absolute;
+  top: 24%;
+  bottom: 0;
+  left: 29%;
+  right: 0;
+  height: 31%;
+  width: 41.7%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+  border-radius: 16px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+    .apply-border-radius {
+      border-radius: 16px;
+    }
+
+    .icon {
+      width: 11px;
+      height: 18px;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+    }
+
+    .card-body{
+      padding: 0 24px 24px 24px;
+    }
+
+    .card-body h1 {
+      font-size: 22px;
+      color: white;
+    }
+
+    .card-body h1:hover {
+      color: #00FFF8;
+    }
+
+    .card-body h2 {
+      color: #8BACD9;
+      font-size: 18px;
+    }
+
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     }
+
+     .avatar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+     }
+
+     .avatar-title {
+       color: #8BACD9;
+       font-size: 15px;
+     }
+
+     .me {
+        color: white;
+     }
+
+      .avatar-title span:hover {
+  color: #00FFF8;
+ }
+
+     .avatar-img {
+       width: 33px;
+       height: 33px;
+       border: 1px solid white;
+       border-radius: 50%;
+     }
+
+     span {
+      color: white;
+     }
+ 
+ .item span:hover {
+    color: #00FFF8;
+ }
+
+
+
+  </style>
+
+  </head>
+  <body>
+
+    <div class="card">
+      <img class="apply-border-radius image-equilibrium"
+        src="./images/image-equilibrium.jpg" alt>
+      <div class="overlay">
+        <div class="text"><i class="fa-regular fa-eye"></i></div>
+      </div>
+      <div class="card-body">
+        <h1>Equilibrium #3429</h1>
+        <h2>Our Equilibrium collection promotes balance and calm.</h2>
+        <div class="row">
+          <div class="item"><img class="icon" src="./images/icon-ethereum.svg"
+              alt><span>0.041 ETH</span></div>
+
+          <div class="item"><img class="icon" src="./images/icon-clock.svg"
+              alt><span>3 days
+              left</span> </div>
+        </div>
+        <hr>
+        <div class="avatar">
+          <img class="avatar-img" src="./images/image-avatar.png" alt>
+          <p class="avatar-title">Creation of <span>Jules Wyvern</span></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="me">Made by Tobi Adegoroye</div>
+    <script src="https://kit.fontawesome.com/84e8532b49.js"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
